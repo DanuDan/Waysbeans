@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.checkbox-toping{
+  display: none;
+}
+
+.checkbox-toping:checked+label::after{
+  /* content: url(/src/assets/check.png); */
+  display: absolute;
+}
+.bgCard {
+  background-color: rgb(235, 199, 197) !important;
+  border-radius: 12px !important;
+}

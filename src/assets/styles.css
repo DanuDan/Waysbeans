@@ -1,0 +1,89 @@
+.success {
+    color: rgb(50,255,55)
+}
+.canceled {
+    color: rgb(255,25,10)
+}
+.ontheway {
+    color: #00D1FF
+}
+.waiting {
+    color: #FF9900
+}
+.triggered :hover {
+    cursor: pointer;
+    background-color: #613d28;
+    color: #613D2B;
+    border-color:#613D2B ;
+    
+}
+.description {
+    list-style-type:none;
+    text-align: left;
+    margin-left: 0px;
+}
+.waysred {
+    background-color: #BD0707;
+}
+.add-title {
+    text-align: left;
+}
+.form-box {
+    height: 50px;
+    border: 3px solid #BD0707;
+    color:#757575;
+    background-color: #f7f1f1;
+}
+.formInput{
+    border-color: #613D28 !important
+}
+.formInput:focus{
+    outline: 0 none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 169, 104, 0.863);
+}
+.file {
+    padding: 0.5 rem 0.35 rem;
+    color:#757575;
+    background-color: #f7f1f1;
+}
+.jc-between {
+    justify-content: space-between;
+}
+.ai-center {
+    align-items: center;
+}
+
+.btn-auth-brown {
+    background-color: #613D2B;
+    border-color: #613D2B;
+    color: whitesmoke;
+    border: solid;
+    --bs-btn-focus-shadow-rgb: #e9a57e;
+
+    border-radius: 8px;
+}
+.btn-auth-brown:focus {
+    outline: #613D28 !important;
+    background-color:#613D28 ;
+    color: whitesmoke;
+    border-color:#e9a57e !important;
+
+}
+
+.btn-auth-brown:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    border-color:  #e9a57e !important;
+    color:#613D2B;
+    border: solid;
+    border-radius: 8px;
+    font-weight: 500;
+}
+.notif {
+    color: white  !important;
+    text-decoration: none !important;
+    border-radius: 15px;
+}
+.trash-btn:hover {
+    cursor: pointer;
+}
