@@ -71,7 +71,7 @@ function LandingPage() {
     
     <Card style={{ maxWidth: '16rem', minWidth:'13rem'}} className="m-2 ms-5 pe-0 ps-0" key={index}>
        <Link to={state.isLogin === true ? `/detail/${item.id}` : <Modal><LoginAuth/></Modal>}>
-          <Card.Img variant="top" src={item.image}/>
+          <Card.Img variant="top" src={item.image.substr(0,38)}/>
        </Link>
       <Card.Body className="bgCard">
         <Card.Title className='brown'>{item.name}</Card.Title>
