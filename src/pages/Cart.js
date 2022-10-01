@@ -19,108 +19,6 @@ function Cart() {
     const title = "Cart";
     document.title = "Waysbeans | " + title;
 
-    // let navigate = useNavigate();
-    
-    // let handleDelete = async (id) => {
-    //     await API.delete(`cart/${id}`);
-    //     refetch();
-    // };
-
-    // let { data: transaction, refetch } = useQuery("transCache", async () => {
-    //     const response = await API.get("/transaction-status");
-    //     return response.data.data;
-    // });
-
-    // const handleClickplus = async (qty, id, price) => {
-    //     // Counter state is incremented
-    //     const config = {
-    //         headers: {
-    //             "Content-type": "application/json",
-    //         },
-    //         };
-    //         const newQty = qty + 1;
-    //         const newTotal = price * newQty;
-    //         const req = JSON.stringify({
-    //         qty: newQty,
-    //         sub_amount: newTotal,
-    //         });
-    //         await API.patch(`/cart/${id}`, req, config);
-    //         refetch();
-    //     };
-
-    //     const handleClickmin = async (id, qty, price, sub_amount) => {
-    //         const config = {
-    //         headers: {
-    //             "Content-type": "application/json",
-    //         },
-    //         };
-    //         console.log(sub_amount);
-    //         console.log(price);
-    //         // Counter state is decremented
-    //         if (qty === 1) {
-    //         return;
-    //         }
-    //         const newQty = qty - 1;
-    //         const newTotal = sub_amount - price * newQty;
-    //         console.log(newTotal);
-    //         const req = JSON.stringify({
-    //         qty: newQty,
-    //         sub_amount: newTotal * newQty,
-    //         });
-    //         await API.patch(`/cart/${id}`, req, config);
-    //         // refetch();
-    //     };
-    
-    //     // total Payment
-    //     let Total = transaction?.carts?.reduce((a, b) => {
-    //         return a + b.sub_amount;
-    //     }, 0);
-    //     let TotalQTY = transaction?.carts?.reduce((a, b) => {
-    //         return a + b.qty;
-    //     }, 0);
-
-    //     // pay Handler
-    //     const form = {
-    //         status: "failed",
-    //         total: Total,
-    //     };
-
-    //     const handleSubmit = useMutation(async (e) => {
-    //         const config = {
-    //             header: {
-    //                 "Content-type": "application/json",
-    //             },
-    //         }
-                
-    //         // Insert transaction data
-    //         const body = JSON.stringify(form)
-
-    //         const response = await API.patch("/transactionID", body, config)
-
-    //         const token = response.data.token
-    //         console.log(token);
-    //         window.snap.pay(token, {
-    //             onSuccess: function (result) {
-    //               /* You may add your own implementation here */
-    //               console.log(result);
-    //               navigate("/profile");
-    //             },
-    //             onPending: function (result) {
-    //               /* You may add your own implementation here */
-    //               console.log(result);
-    //               navigate("/profile");
-    //             },
-    //             onError: function (result) {
-    //               /* You may add your own implementation here */
-    //               console.log(result);
-    //             },
-    //             onClose: function () {
-    //               /* You may add your own implementation here */
-    //               alert("you closed the popup without finishing the payment");
-    //             },
-    //           });
-    //     })
-
     const [dataCart,setDataCart] = useState([]);
     const navigate = useNavigate();
 
@@ -220,7 +118,7 @@ function Cart() {
 
     useEffect(() => {
         const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
-        const myMidTransClientKey = process.env.SERVER_KEY;
+        const myMidTransClientKey = process.env.REACT_APP_MIDTRANS_CLIENT_KEY;
 
         let scriptTag = document.createElement("script");
         scriptTag.src = midtransScriptUrl;
