@@ -70,10 +70,11 @@ function Detail() {
 <div>
             <NavbarUser/>
             <Container  className="mt-5 pt-5">
+            {product?.map((item, index) => (
                 <Row className="mt-5">
                     <Col xs={12} md={5}>
                         <img 
-                        src={item.product?.image.substr(38)}
+                        src={item?.image.substr(38)}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
@@ -81,25 +82,26 @@ function Detail() {
                     </Col>
                     <Col xs={12} md={7} style={{backgroundColor:"white"}}>
                         <div>
-                            <h1 className='text-start brown fw-bold mb-3'>{product?.name}</h1>
+                            <h1 className='text-start brown fw-bold mb-3'>{item.name}</h1>
                         </div>
                         <div className='mb-3'>
-                            <p className='text-start brown' style={{fontSize:"18px", color:"#974A4A"}}>{product?.stock}</p>
+                            <p className='text-start brown' style={{fontSize:"18px", color:"#974A4A"}}>{item?.stock}</p>
                         </div>
                         <div className='mb-5 mt-3'>
                             <Row>
-                                <p>{product?.description}</p>
+                                <p>{item?.description}</p>
 
                             </Row>
                         </div>
                         <div className='d-flex' style={{justifyContent:"flex-end"}}>
-                            <h2 className='brown fw-bold fs-4 mt-3 mb-5'>Rp{product?.price}</h2>
+                            <h2 className='brown fw-bold fs-4 mt-3 mb-5'>Rp{item?.price}</h2>
                         </div>
                     <div className=''>
                         <Button className="btn btn-auth-brown fw-bold mb-4" style={{width:"100%"}} onClick={(e) => handleAddToCart.mutate(e)}>Add to Cart</Button>
                     </div>
                     </Col>
                 </Row>
+            ))}
             </Container>
         </div>
   )
