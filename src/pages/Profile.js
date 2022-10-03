@@ -70,7 +70,7 @@ useEffect(() => {
                      <Col xs={12} md={6}>
                      <h4 className='text-start text-danger fw-bold fs-4'>My Profile</h4>
                      <img
-                     src= {item?.image.substr(38) === "http://localhost:5000/" ? profPic : item?.image.substr(38)} 
+                     src= {item?.image.substr(38) === "https://waysbeans-porto.herokuapp.com/" ? profPic : item?.image.substr(38)} 
                      style={{width:"100%", height:"100%", borderRadius:"5px"}}
                      className=''
                      alt=''

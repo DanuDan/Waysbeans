@@ -47,7 +47,7 @@ useEffect(() => {
       }, [setProfile]);
 
       console.log (profiles)
-  const picProfileToggle = <Image src= {profiles.image === "http://localhost:5000/" ? profilePic : profiles.image}
+  const picProfileToggle = <Image src= {profiles.image === "https://waysbeans-porto.herokuapp.com/" ? profilePic : profiles.image}
   width="50px" height="50px" className="rounded-circle"/>
 
   const [state, dispatch] = useContext(UserContext);
