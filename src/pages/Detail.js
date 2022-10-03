@@ -64,7 +64,7 @@ function Detail() {
         console.log(error);
     }
   });
-console.log(product)
+
   return (
 <div>
             <NavbarUser/>
@@ -74,7 +74,7 @@ console.log(product)
                     {product?.map((item, index) => (
                     <Col xs={12} md={5}>
                         <img 
-                        src={item.image.substr(38)}
+                        src={index.image.substr(38)}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
