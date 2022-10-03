@@ -74,7 +74,7 @@ function Detail() {
                     {product?.map((item, index) => (
                     <Col xs={12} md={5}>
                         <img 
-                        src={index.image.substr(38)}
+                        src={index.image}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
