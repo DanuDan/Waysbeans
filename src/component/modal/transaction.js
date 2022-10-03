@@ -40,7 +40,7 @@ const transaction = async () => {
                              <div className="d-flex">
                              <Row className="pt-2" style={{padding:'auto'}}>
                                  <img
-                                 src={"http://localhost:5000/" + itm.product.image}
+                                 src={itm.product.image}
                                  style={{maxWidth:"180px", width:'100%', height:'80%', borderRadius:"8px"}}
                                  className=''
                                  alt=''
