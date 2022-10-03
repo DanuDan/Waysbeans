@@ -88,7 +88,7 @@ function Detail() {
                         </div>
                         <div className='mb-5 mt-3'>
                             <Row>
-                                <p>{item?.description}</p>
+                                <p>{product?.description}</p>
 
                             </Row>
                         </div>
