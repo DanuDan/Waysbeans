@@ -70,7 +70,7 @@ useEffect(() => {
                      <Col xs={12} md={6}>
                      <h4 className='text-start text-danger fw-bold fs-4'>My Profile</h4>
                      <img
-                     src= {item?.image === "http://localhost:5000/" ? profPic : item?.image} 
+                     src= {item?.image.substr(38) === "http://localhost:5000/" ? profPic : item?.image.substr(38)} 
                      style={{width:"100%", height:"100%", borderRadius:"5px"}}
                      className=''
                      alt=''
@@ -124,7 +124,7 @@ useEffect(() => {
                              <div className="d-flex">
                              <Row className="pt-2" style={{padding:'auto'}}>
                                  <img
-                                 src={"http://localhost:5000/" + itm.product.image}
+                                 src={itm.product.image.substr(38)}
                                  style={{maxWidth:"180px", width:'100%', height:'80%', borderRadius:"8px"}}
                                  className=''
                                  alt=''
