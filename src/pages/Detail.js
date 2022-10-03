@@ -64,7 +64,7 @@ function Detail() {
         console.log(error);
     }
   });
-
+console.log(product)
   return (
 <div>
             <NavbarUser/>
