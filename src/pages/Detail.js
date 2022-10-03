@@ -25,7 +25,7 @@ function Detail() {
     const products = async () => {
         try {
             const response = await API.get('/product/' + params.id)
-            setProduct(response.data.data)
+            setProduct(response.data.data[0])
         } catch (error) {
             console.log(error);
         }   
@@ -83,7 +83,7 @@ function Detail() {
                 <Row className="mt-5">
                     <Col xs={12} md={5}>
                         <img 
-                        src={product?.image.substr(38)}
+                        src={product?.image}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
