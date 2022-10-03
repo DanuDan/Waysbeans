@@ -16,12 +16,23 @@ function Detail() {
     const params = useParams();
     let navigate = useNavigate();
     const { id } = useParams();
-    
+    const [product, setProduct] = useState([])
     // Product Fetch
-    let { data: product, refetch } = useQuery("productsCache", async () => {
-            const response = await API.get("/product/" + id);
-            return response.data.data[0];
-        });
+    // let { data: product, refetch } = useQuery("productsCache", async () => {
+    //         const response = await API.get("/product/" + id);
+    //         return response.data.data[0];
+    //     });
+    const products = async () => {
+        try {
+            const response = await API.get('/product/' + params.id)
+            setProduct(response.data.data)
+        } catch (error) {
+            console.log(error);
+        }   
+    };
+    useEffect(() => {
+        products();
+    }, []);
 
       // Check Transaction
     const [transaction, setTransaction] = useState([]);
@@ -64,8 +75,7 @@ function Detail() {
         console.log(error);
     }
   });
-console.log(product)
-console.log(product.image)
+
   return (
 <div>
             <NavbarUser/>
@@ -73,7 +83,7 @@ console.log(product.image)
                 <Row className="mt-5">
                     <Col xs={12} md={5}>
                         <img 
-                        src={product.image}
+                        src={product?.image}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
