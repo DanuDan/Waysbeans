@@ -25,7 +25,7 @@ function Detail() {
     const products = async () => {
         try {
             const response = await API.get('/product/' + params.id)
-            setProduct(response.data.data[0])
+            setProduct(response.data.data)
         } catch (error) {
             console.log(error);
         }   
