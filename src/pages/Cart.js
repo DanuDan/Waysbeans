@@ -142,7 +142,7 @@ function Cart() {
                 {dataCart?.map((item, index) => (
                     <Row className="p-3">
                         <Col xs={12} md={2} style={{}}>
-                            <Image src = {item.product.image.substr(38)} alt="" style={{width:"72px", borderRadius:""}} />
+                            <Image src = {item.product.image} alt="" style={{width:"72px", borderRadius:""}} />
                         </Col>
                         <Col xs={12} md={6} style={{}}>
                             <ul className="description justify-content-start align-items-center pt-2 ps-0 mb-0">
