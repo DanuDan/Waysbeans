@@ -20,7 +20,6 @@ function Detail() {
     // Product Fetch
     let { data: product, refetch } = useQuery("productsCache", async () => {
             const response = await API.get("/product/" + id);
-            product?.image = substring(38);
             return response.data.data;
         });
 
