@@ -71,16 +71,14 @@ function Detail() {
             <Container  className="mt-5 pt-5">
 
                 <Row className="mt-5">
-                    {product?.map((item, index) => (
                     <Col xs={12} md={5}>
                         <img 
-                        src={index.image}
+                        src={product.substr(38).image}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
                         />
                     </Col>
-                    ))}
                     <Col xs={12} md={7} style={{backgroundColor:"white"}}>
                         <div>
                             <h1 className='text-start brown fw-bold mb-3'>{product.name}</h1>
