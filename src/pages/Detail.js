@@ -20,6 +20,7 @@ function Detail() {
     // Product Fetch
     let { data: product, refetch } = useQuery("productsCache", async () => {
             const response = await API.get("/product/" + id);
+            product?.image = substring(38);
             return response.data.data;
         });
 
@@ -73,7 +74,7 @@ function Detail() {
                 <Row className="mt-5">
                     <Col xs={12} md={5}>
                         <img 
-                        src={product?.image.substring(38)}
+                        src={product?.image}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
