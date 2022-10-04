@@ -81,7 +81,7 @@ function Detail() {
                     </Col>
                     <Col xs={12} md={7} style={{backgroundColor:"white"}}>
                         <div>
-                            <h1 className='text-start brown fw-bold mb-3'>{product.name}</h1>
+                            <h1 className='text-start brown fw-bold mb-3'>{product?.name}</h1>
                         </div>
                         <div className='mb-3'>
                             <p className='text-start brown' style={{fontSize:"18px", color:"#974A4A"}}>{product?.stock}</p>
