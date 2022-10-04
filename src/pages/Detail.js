@@ -18,7 +18,7 @@ function Detail() {
     const { id } = useParams();
     
     // Product Fetch
-    let { data: product, refetch } = useQuery("productsCache", async () => {
+    let { data: product, refetch } = useQuery("", async () => {
             const response = await API.get("/product/" + id);
             return response.data.data;
         });
