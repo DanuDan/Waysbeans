@@ -73,7 +73,7 @@ function Detail() {
                 <Row className="mt-5">
                     <Col xs={12} md={5}>
                         <img 
-                        src={product.substr(38).image}
+                        src={product.image}
                         style={{width: "80%" }}
                         className="img-fluid"
                         alt="transaction"
