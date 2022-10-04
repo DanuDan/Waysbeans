@@ -20,7 +20,7 @@ function Detail() {
     // Product Fetch
     let { data: product, refetch } = useQuery("productsCache", async () => {
             const response = await API.get("/product/" + id);
-            return response.data.data[0];
+            return response.data.data;
         });
 
       // Check Transaction
@@ -65,11 +65,11 @@ function Detail() {
     }
   });
 
+
   return (
 <div>
             <NavbarUser/>
             <Container  className="mt-5 pt-5">
-
                 <Row className="mt-5">
                     <Col xs={12} md={5}>
                         <img 
