@@ -48,7 +48,7 @@ function RegisterAuth() {
 
       console.log(response);
 
-      if (response.data.status === "success") {
+      if (response.data.status === "200") {
         navigate(<LoginAuth/>);
         const alert = (
           <Alert variant="success" className="py-1">

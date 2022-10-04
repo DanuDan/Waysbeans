@@ -70,7 +70,7 @@ function EditProfile() {
             // Insert category data
             await API.patch("/profile/" + profiles.id, formData, config)
               console.log(formData);
-            // navigate("/transaction");
+            navigate("/");
             } catch (error) {
             console.log(error);
             }
@@ -180,7 +180,7 @@ function EditProfile() {
             <img
             src={preview}
             className=''
-            style={{height:"80%",borderRadius:"5px"}}
+            style={{maxWidth:"400px", height:"80%",borderRadius:"5px"}}
             alt=''
             />
             )}
